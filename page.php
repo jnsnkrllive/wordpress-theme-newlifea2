@@ -1,27 +1,29 @@
 <?php
-/** PAGE
- ** Displays all of the content on a page
+/**
+ ** PAGE
  **/
 ?>
 
+
 <?php get_header(); ?>
 
-    <div id="page-container">
+    <div class="container" id="single-page">
 
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <div class="post">
           <div class="post-title">
-            <h2><?php the_title(); ?></h2>
+            <span class="block post-title-bar"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></span>
           </div>
-          <div class="post-entry-page">
-            <?php the_content(); ?>
-            <?php edit_post_link('Edit.', '<span class="edit-page">', '</span>'); ?>
+          <div class="post-entry">
+            <?php the_content('Read the rest of this entry &raquo;'); ?>
+          </div>
+          <div class="post-meta">
+            <?php newlife_post_data(); ?>
           </div>
           <div class="clear"></div>
-        </div><!-- (class="post") -->
+        </div>
       <?php endwhile; endif; ?>
 
-    </div><!-- (id="page-container") -->
+    </div><!-- (id="single-page") -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

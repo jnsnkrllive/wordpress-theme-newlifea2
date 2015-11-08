@@ -1,5 +1,5 @@
 /**
- ** Theme Name: New Life Theme
+ ** Theme Name: New Life Theme - 2.0
  ** Theme URI: http://www.newlifea2.org/
  ** Version: 3.4.2 Alpha
  ** Description: WordPress Theme for New Life Church
@@ -8,50 +8,53 @@
  **/
 
 /** Color Scheme **
-
-#0088A7 = rgb(0,136,167) = Logo Blue
-#AACF54 = rgb(170,207,84) = Logo Green
-
-Primary...
-#CE1326 = rgb(206,19,38) = Red
-#E3E3E3 = rgb(227,227,227) = Light Gray
-#686060 = rgb(104,96,96) = Dark Gray
+New Life Colors...
+#0088A6 = rgb(0,136,166) = Logo Blue
+#A9CF55 = rgb(169,207,85) = Logo Green
+#0C4B59 = rgb(12,75,89) = Accent Dark Blue
 #000000 = rgb(0,0,0) = Black
 #FFFFFF = rgb(255,255,255) = White
-Secondary...
-Accent...
 **/
 
 /** Font Family **
-"Lucida Grande", sans-serif;
+"futura_md_bt_medium", "Lucida Grande", sans-serif;
+"courier new", "Lucida Grande", sans-serif;;
+**/
+
+/** Media Queries **
+@media screen and (min-width: 901px) { Tablet Landscape, Desktop }
+@media screen and (min-width: 601px) and (max-width: 900px) { Tablet Portrait }
+@media screen and (max-width: 600px) { Small Device Portrait, Small Device Landscape }
 **/
 
 
 /** Global
 ****************************************************************/
+@font-face {
+  font-family: futura_md_bt_medium;
+  src: url('Futura-Md-BT-Medium.ttf');
+}
+
 html {
-  background-color: #E3E3E3;
   display: block;
+  width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
 }
 
 body {
   display: block;
-  font-family: "Lucida Grande", sans-serif;
-  font-size: medium;
+  width: 100%;
   height: 100%;
-  margin: 0px;
-  padding: 0px;
-  margin: 0px 0px -90px 0px;
+  margin: 0;
+  padding: 0;
+  font-family: "futura_md_bt_medium", "Lucida Grande", sans-serif;
+  font-size: medium;
   text-decoration: none;
   word-spacing: normal;
 }
-
-img {
-  border: none;
-  display: block;
-}
-
 
 /** General Classes
 ****************************************************************/
@@ -72,12 +75,16 @@ img {
 }
 
 .aligncenter {
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 
 .alignright {
   float: right;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .clear {
@@ -85,264 +92,7 @@ img {
 }
 
 .hide {
-  display: none;
-}
-
-
-/** Structure
-****************************************************************/
-#main-container {
-  -moz-box-shadow: 0px 0px 9px 9px #686060;
-  -webkit-box-shadow: 0px 0px 9px 9px #686060;
-  box-shadow: 0px 0px 9px 9px #686060;
-  background-color: #FFFFFF;
-  width: 900px;
-  /*height: 100%;*/
-height: auto;
-  margin: 0px auto 0px auto;
-  padding: 0px;
-}
-
-#header-container {
-/*
-position: fixed;
-top: 0px;
-*/
-  width: 900px;
-  height: 90px;
-  background-color: #FFFFFF;
-  border-bottom: 2px solid #000000;
-  margin: 0px;
-  padding: 0px;
-  z-index: 999;
-}
-
-#header-area-1 {
-  width: 200px;
-  height: 90px;
-  display: inline;
-  float: left;
-  margin: 0px;
-  padding: 0px;
-}
-
-#header-area-2 {
-  width: 700px;
-  height: 90px;
-  display: inline;
-  float: left;
-  margin: 0px;
-  padding: 0px;
-}
-
-#header-logo a img{
-  height: 80px;
-  padding: 5px;
-}
-
-#header-titlebar {
-  width: 500px;
-  height: 67%;
-  display: inline;
-  float: left;
-  margin: 0px;
-  padding: 0px;
-}
-
-#header-searchbar {
-  width: 200px;
-  height: 67%;
-  display: inline;
-  float: left;
-  margin: 0px;
-  padding: 0px;
-}
-
-#header-navbar {
-  width: 700px;
-  height: 33%;
-  display: inline;
-  float: left;
-  margin: 0px;
-  padding: 0px;
-}
-
-#scrollable {
-width: 900px;
-/*
-padding-top: 92px;
-*/
-/*
-  width: 890px;
-  position: absolute;
-  top: 92px;
-  bottom: 0px;
-  display: inline;
-  overflow: hidden;
-  padding-right: 10px; /* same as #scrollbar.width
-*/
-}
-
-#scrollbar {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  z-index: 10;
-  background: #444;
-  border-radius: 5px;
-  cursor: pointer;
-  visibility: hidden;
-  width: 10px;
-}
-
-#content {
-  /*position: absolute;*/
-  margin: 0px;
-  padding: 0px;
-  vertical-align: top;
-}
-
-
-#page-container,
-#post-container {
-/*background-color: rgb(250,250,255);*/
-  width: 600px;
-  display: inline;
-  float: left;
-  margin: 0px;
-  padding: 0px;
-  vertical-align: top;
-}
-
-#sidebar-container {
-/*background-color: rgb(255,250,250);*/
-  width: 300px;
-  display: inline;
-  float: left;
-  margin: 0px;
-  padding: 0px;
-  vertical-align: top;
-}
-
-#footer-container {
-/*background-color: rgb(250,255,250);*/
-  width: 100%;
-  margin: 0px;
-  padding: 10px 0 30px 0;
-  vertical-align: top;
-}
-
-
-/** Header
-****************************************************************/
-#header-titlebar #blogname {
-  font-size: 1.5em;
-  font-weight: 900;
-  margin-left: 5px;
-}
-
-#header-titlebar #blogdesc {
-  font-size: 1.0em;
-  margin-left: 5px;
-}
-
-
-/** Navigation
-****************************************************************/
-#navmenu { /* The container wrapping ul.dropdown */
-  float: left;
-  width: 100%;
-}
-
-ul.dropdown { /* Top Level Unordered List */
-  float: left;
-  list-style-type: none;
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
-}
-
-ul.dropdown li {
-  display: inline;
-  float: left;
-  font-size: 1.2em;
-  position: relative;
-  height: 30px;
-}
-
-ul.dropdown li a {
-  color: #000000;
-  font-weight: 200;
-  line-height: 30px;
-  margin: 0px;
-  padding: 0px 15px;
-  text-decoration: none;
-}
-
-ul.dropdown li:hover {
-  -moz-border-radius-topright: 9px;
-  -moz-border-radius-topleft: 9px;
-  border-top-right-radius: 9px;
-  border-top-left-radius: 9px;
-  background-color: #000000;
-}
-
-ul.dropdown li:hover a {
-  color: #FFFFFF;
-}
-
-ul.dropdown li ul a {
-  display: block;
-  line-height: 15px;
-  margin: 0px;
-  padding: 10px;
-}
-
-ul.dropdown ul { /* Sub Level Unordered List */
-  list-style: none;
-  border-top: 2px solid #000000;
-  padding: 0px;
-  position: absolute;
-  width: 180px;
-  z-index: 50;
-}
-
-ul.dropdown li ul {
-  top: 30px;
-}
-
-ul.dropdown ul ul {
-  left: 100%;
-  top: 0;
-}
-
-ul.dropdown ul li {
-  float: none;
-  font-size: 0.8em;
-}
-
-ul.dropdown ul,
-ul.dropdown li:hover ul ul,
-ul.dropdown ul li:hover ul ul {
-  display: none;
-}
-
-ul.dropdown li:hover ul,
-ul.dropdown ul li:hover ul ,
-ul.dropdown ul li ul li:hover ul {
-  background-color: #E3E3E3;
-  display: block;
-}
-
-ul.dropdown li * a:link,
-ul.dropdown li * a:active,
-ul.dropdown li * a:visited {
-  color: #000000;
-}
-
-ul.dropdown li * a:hover {
-  background-color: #000000;
-  color: #FFFFFF;
+  display: none !important;
 }
 
 
@@ -354,17 +104,14 @@ h3,
 h4,
 h5,
 h6 {
-  color: #686060;
-  font-family: "Arial", "Vendana", serif;
+  padding: 5px 0;
+  color: #E3E3E3;
+  font-family: "futura_md_bt_medium", "Lucida Grande", sans-serif;
   font-style: normal;
   font-variant: normal;
   font-weight: bold;
   letter-spacing: normal;
   line-height: normal;
-  margin-top: 11px;
-  margin-right: 0px;
-  margin-bottom: 11px;
-  margin-left: 0px;
   text-decoration: none;
   vertical-align: middle;
   word-spacing: normal;
@@ -397,13 +144,13 @@ h6 {
 
 /** Links
 ****************************************************************/
-
 a:link,
 a:active,
 a:visited,
 a:hover {
-  color: #686060;
-  font-family: "Lucida Grande", sans-serif;
+  color: #E3E3E3;
+  font-family: "futura_md_bt_medium", "Lucida Grande", sans-serif;
+  cursor: pointer;
 }
 
 a:link,
@@ -416,80 +163,417 @@ a:hover {
   text-decoration: underline;
 }
 
+a.anchor-top {
+  right: 4px;
+  bottom: 4px;
+  background: #A9CF55 url('images/arrow-top.png') no-repeat center center;
+  background-size: 24px 24px;
+}
+
+a.anchor-bottom {
+  top: 4px;
+  right: 4px;
+  background: #A9CF55 url('images/arrow-bottom.png') no-repeat center center;
+  background-size: 24px 24px;
+}
+
+a.anchor-link {
+  position: fixed;
+  float: right;
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+  color: #0C4B59;
+  font-family: "courier new", "Lucida Grande", sans-serif;
+  font-size: 1.0em;
+  -webkit-border-radius: 4px;
+  -moz-border-radius:    4px;
+}
+
+@media only screen and (min-width: 601px){
+  a.anchor-link {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  a.anchor-link {
+    display: inline;
+  }
+}
+
+#footer a {
+  color: #0C4B59;
+}
+
+
+/** Images
+****************************************************************/
+img {
+  display: block;
+  border: none;
+}
+
+
+/** Structure
+****************************************************************/
+.container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #0C4B59;
+  color: #FFFFFF;
+  -webkit-border-radius: 5px;
+  -moz-border-radius:    5px;
+  border-radius:         5px;
+}
+
+#header {
+  height: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  color: #0C4B59;
+}
+
+#newlife-widget-area-desktop {
+  margin-top: 20px;
+}
+
+#footer {
+  height: auto;
+  margin-top: 20px;
+  background-color: #FFFFFF;
+  color: #0C4B59;
+}
+
+#comments,
+#error-404 {
+  padding: 10px;
+}
+
+@media screen and (min-width: 901px) {
+  .container,
+  #header,
+  #footer {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  #main-container {
+    width: 900px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 0 20px 0;
+  }
+  
+  #newlife-widget-area-desktop {
+    display: block;
+  }
+
+  #newlife-widget-area-mobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .container,
+  #header,
+  #footer {
+    width: 98%;
+    margin-right: 1%;
+    margin-left: 1%;
+  }
+
+  #main-container {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0 0 20px 0;
+  }
+  
+  #newlife-widget-area-desktop {
+    display: block;
+  }
+  
+  #newlife-widget-area-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container,
+  #header,
+  #footer {
+    width: 98%;
+    margin-right: 1%;
+    margin-left: 1%;
+  }
+
+  #main-container {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0 0 10px 0;
+  }
+  
+  #newlife-widget-area-desktop {
+    display: none;
+  }
+  
+  #newlife-widget-area-mobile {
+    display: block;
+  }
+}
+
+.block {
+  display: block;
+  padding: 20px 4px 4px 4px;
+}
+
+.section-title-bar {
+  height: 30px;
+  padding-left: 10px;
+  background-color: #0088A6;
+  color: #FFFFFF;
+  font-size: 1.5em;
+  text-transform: lowercase;
+  -webkit-border-radius: 5px;
+  -moz-border-radius:    5px;
+  border-radius:         5px;
+}
+
+.section-title-bar a {
+  color: #FFFFFF;
+}
+
+
+/** Header
+****************************************************************/
+@media screen and (min-width: 901px) {
+  #header img.logo {
+    width: 50%;
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  #header img.logo {
+    width: 50%;
+    min-width: 450px;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #header img.logo {
+    width: 75%;
+    padding: 10px;
+  }
+}
+
+#header-titlebar #blogname {
+  margin-left: 5px;
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+#header-titlebar #blogdesc {
+  margin-left: 5px;
+  font-size: 1.0em;
+}
+
 
 /** Lists
 ****************************************************************/
-/*
-ol,
-ul,
-li {
-  font-family: "Lucida Grande", sans-serif;
-  margin-top: 3px;
-  margin-bottom: 3px;
-}
-
-ul.disc {
+ul {
+  /*
   list-style-type: disc;
+  color: #0088A6;
+  */
 }
 
-ul.circle {
-  list-style-type: circle;
+
+/** Navigation
+****************************************************************/
+#navmenu { /* The container wrapping ul.dropdown */
+  float: left;
+  margin-top: 20px;
+  margin-bottom: 0;
+  padding: 0;
+  background-color: #0088A6;
+  color: #FFFFFF;
+  font-size: 1.5em;
+  text-transform: lowercase;
+  -webkit-border-radius: 5px;
+  -moz-border-radius:    5px;
+  border-radius:         5px;
 }
 
-ul.none {
+ul.dropdown { /* Top Level Unordered List */
+  float: left;
+  width: 100%;
+  margin: 10px 10px 0 10px;
+  padding: 0;
   list-style-type: none;
 }
 
-ol.decimal {
-  list-style-type: decimal;
+ul.dropdown li {
+  display: inline;
+  position: relative;
+  float: left;
+  height: 30px;
+  padding-top: 10px;
+  padding-bottom: 4px;
 }
 
-ol.uroman {
-  list-style-type: upper-roman;
+ul.dropdown li a {
+  margin: 0;
+  padding: 0 15px;
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
-ol.lalpha {
-  list-style-type: lower-alpha;
+ul.dropdown li:hover {
+  background-color: #0C4B59;
+  -moz-border-radius-topleft:  9px;
+  -moz-border-radius-topright: 9px;
+  border-top-left-radius:      9px;
+  border-top-right-radius:     9px;
 }
 
-li {
-  text-align: left;
+ul.dropdown li:hover a {
+  color: #FFFFFF;
 }
-*/
+
+ul.dropdown li ul a {
+  display: block;
+  margin: 0;
+  padding: 10px;
+}
+
+ul.dropdown ul { /* Sub Level Unordered List */
+  position: absolute;
+  z-index: 50;
+  width: 180px;
+  padding: 0;
+  list-style: none;
+}
+
+ul.dropdown li ul {
+  top: 44px;
+}
+
+ul.dropdown li ul li ul {
+  top: -42px;
+  left: 180px;
+}
+
+ul.dropdown ul li {
+  float: none;
+  font-size: 0.8em;
+}
+
+ul.dropdown ul * li {
+  float: none;
+  font-size: 1.0em;
+}
+
+ul.dropdown ul,
+ul.dropdown li:hover ul ul,
+ul.dropdown ul li:hover ul ul {
+  display: none;
+}
+
+ul.dropdown li:hover ul,
+ul.dropdown ul li:hover ul ,
+ul.dropdown ul li ul li:hover ul {
+  background-color: #0C4B59;
+  display: block;
+}
+
+ul.dropdown li * a:link,
+ul.dropdown li * a:active,
+ul.dropdown li * a:visited {
+  color: #FFFFFF;
+}
+
+ul.dropdown li * a:hover {
+  background-color: #0088A6;
+  color: #FFFFFF;
+}
 
 
 /** Extras (Post)
 ****************************************************************/
 div.post {
-  width: 95%;
   height: auto;
-  border-bottom: 1px solid #686060;
-  margin: 10px auto;
-  padding: 0px;
+  margin: 0 auto;
+  padding: 0;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+div.expandable div.post:last-child {
+  border-bottom: 0px solid #FFFFFF;
+}
+
+div#archive-results div.post,
+div.expandable div.post,
+div.snippet-posts div.post {
+  width: 95%;
+}
+
+div#single-page div.post,
+div#single-post div.post {
+  width: 100%;
+}
+
+div#single-page div.post div.post-entry,
+div#single-page div.post div.post-data,
+div#single-post div.post div.post-entry,
+div#single-post div.post div.post-data {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.post-title-bar {
+  padding-left: 10px;
+  background-color: #0088A6;
+  color: #FFFFFF;
+  font-size: 1.5em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius:    5px;
+  border-radius:         5px;
+}
+
+.post-title-bar a  {
+  color: #FFFFFF;
 }
 
 div.post-title h2, 
 div.post-title h2 a {
-  color: #686060;
+  margin: 0;
+  color: #FFFFFF;
   font-weight: bold;
-  margin-bottom: 6px;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
 }
 
-div.post-title h2 a:hover {
-  text-decoration: underline;
-}
-
 div.post-meta {
-  font-size: small;
-  height: 100%;
-  padding-left: 3px;
   position: relative;
+  float: right;
+  width: 100%;
+  height: 100%;
+  margin: 2px auto;
+  padding-left: 3px;
+  color: #FFFFFF;
+  font-size: small;
+  text-align: right;
 }
 
 div.post-meta a {
-  color: #686060;
+  color: #E3E3E3;
   text-decoration: none;
 }
 
@@ -497,27 +581,31 @@ div.post-meta a:hover {
   text-decoration: underline;
 }
 
-span.post-metadata-author,
-span.post-metadata-date,
-span.post-metadata-category,
-span.post-metadata-tags {
+.post-metadata-author,
+.post-metadata-date,
+.post-metadata-category,
+.post-metadata-tags {
   display: hidden;
 }
 
-div.post-entry {
-  font-size: medium;
+div.expandable div.post-entry {
+  display: none;
 }
 
-div.post-entry-page {
+div.post-entry {
+  width: 95%;
+  margin: 2px auto;
+  color: #FFFFFF;
   font-size: medium;
 }
 
 div.post-entry a {
-  color: #686060;
+  color: #E3E3E3;
+  text-decoration: underline;
 }
 
 h2.pagetitle  {
-  color: #000000;
+  color: #FFFFFF;
   text-align: center;
   text-decoration: underline;
 }
@@ -537,291 +625,311 @@ span.edit-page {
 }
 
 
-/** Extras (Sidebar)
+/** Widget (New Life - Slideshow)
 ****************************************************************/
-#sidebar-container div.widget-area {
-  width: 95%;
-  display: block;
-  font-size: 0.8em;
-  line-height: 1.4em;
-  margin: 0px auto;
+.newlife-widget.newlife-slideshow {
+  position: relative;
+  width: 88%;
+  max-width: 800px;
+  height: 450px;
+  margin: 0 auto;
+  -webkit-border-radius: 30px;
+  -moz-border-radius:    30px;
+  border-radius:         30px;
+  -webkit-box-shadow: 0 0 44px #D6D6D6;
+  -moz-box-shadow:    0 0 44px #D6D6D6;
+  box-shadow:         0 0 44px #D6D6D6;
 }
 
-#sidebar-container div.widget-area a {
-  color: #686060;
+@media screen and (min-width: 901px) {
+  #newlife-widget-area-desktop .newlife-widget.newlife-slideshow {
+    float: right;
+  }
 }
 
-#sidebar-container div.widget-area ul.none {
-  margin: 0px;
-  padding: 0px;
+.newlife-widget.newlife-slideshow img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 8;
 }
 
-#sidebar-container div.widget-area ul {
-  font-size: 12px;
-  list-style: none;
-  margin: 0px;
-  padding: 0 15px 0 20px;
+.newlife-widget.newlife-slideshow img.active {
+  z-index: 10;
 }
 
-#sidebar-container div.widget-area ul li ul {
-  margin: 0px;
-  padding: 0 0 0 2px;
-}
-	
-#sidebar-container div.widget-area ul li ul li ul {
-  margin: 6px 0 -12px 0;
-  padding: 0 0 0 2px;
+.newlife-widget.newlife-slideshow img.last-active {
+  z-index: 9;
 }
 
-#sidebar-container div.widget-area ul li {
-  line-height: 15px;
-  margin: 0px 0px -1px 0px;
-  padding: 3px 0 3px 0px;
-}
-		
-#sidebar-container div.widget-area ul li a {
-  background: none;
-  color: #686060;
-  font-weight: bold;
-  padding: 0 0 0 6px;
-  text-decoration: none;
+.newlife-widget.newlife-slideshow .arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 11;
+  width: 60px;
+  height: 86px;
+  margin-top: -43px;
+  background: url('images/arrows.png') no-repeat;
+  cursor: pointer;
 }
 
-#sidebar-container div.widget-area ul li a:hover {
-  text-decoration: underline;
+.newlife-widget.newlife-slideshow .sliderPrev {
+  left: 0;
+  background-position: left top;
 }
 
-#sidebar-container div.widget-area h2 {
-  color: #686060;
-  font: bold 1.2em "Lucida Grande", sans-serif;
-  line-height: 0.6em;
-  padding: 6px 0 0 0;
-  text-align: center;
+.newlife-widget.newlife-slideshow .sliderPrev:hover {
+  background-position: left bottom;
 }
 
-#sidebar-container div.widget-area h3 {
-  font: normal 1.0em "Lucida Grande", sans-serif;
-  padding: 0 0 3px 0;
+.newlife-widget.newlife-slideshow .sliderNext {
+  right: 0;
+  background-position: right top;
+}
+
+.newlife-widget.newlife-slideshow .sliderNext:hover {
+  background-position: right bottom;
 }
 
 
-/** Extras (Footer)
+/** Widget (New Life - Snippet Posts)
 ****************************************************************/
-#footer-container div.widget-area {
-  display: inline;
-  float: left;
-  width: 33%;
-  font-size: 0.8em;
-  line-height: 1.4em;
-  margin: 0px auto;
+@media screen and (min-width: 901px) {
+  #newlife-widget-area-desktop .newlife-widget.newlife-snippet-posts {
+    float: left;
+    width: 49%;
+    margin-right: 0.45%;
+    margin-left: 0.45%;
+  }
 }
 
-#footer-container div.widget-area div {
-  padding-bottom: 10px;
+@media screen and (max-width: 900px) {
+  #newlife-widget-area-desktop .newlife-widget.newlife-snippet-posts {
+    display: block;
+    width: 88%;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
-#footer-container div.widget-area a {
-  color: #686060;
+span.snippet {
+  float: right;
+  padding-right: 2px;
+  font-family: "courier new", "Lucida Grande", sans-serif;
 }
 
-#footer-container div.widget-area ul.none {
-  margin: 0px;
-  padding: 0px;
-}
-
-#footer-container div.widget-area ul {
-  font-size: 12px;
-  list-style: none;
-  margin: 0px;
-  padding: 0 15px 0 20px;
-}
-
-#footer-container div.widget-area ul li {
-  line-height: 15px;
-  margin: 0px 0px -1px 0px;
-  padding: 3px 0 3px 0px;
-}
-
-#footer-container div.widget-area ul li ul {
-  margin: 0px;
-  padding: 0 0 0 2px;
-}
-
-#footer-container div.widget-area ul li ul li ul {
-  margin: 6px 0 -6px 0;
-  padding: 0 0 0 2px;
-}
-
-#footer-container div.widget-area ul li a {
-  background: none;
-  color: #686060;
-  font-weight: bold;
-  padding: 0 0 0 6px;
-  text-decoration: none;
-}
-
-#footer-container div.widget-area ul li a:hover {
-  text-decoration: underline;
-}
-
-#footer-container div.widget-area h2 {
-  color: #686060;
-  font: bold 1.2em "Lucida Grande", sans-serif;
-  line-height: 0.8em;
-  margin: 0px;
-  padding: 6px 0px;
-  text-align: center;
-}
-
-#footer-container div.widget-area h3 {
-  font: normal 1.0em "Lucida Grande", sans-serif;
-  padding: 0 0 3px 0;
-}
-
-
-/** Extras (Widget - Search Form)
-****************************************************************/
-#header-searchbar .form-search {
-  margin-top: 8px;
-}
-
-form.form-search {
-  text-align: center;
-}
-
-input#s {
-  background: url('images/magnifying-glass.png') no-repeat 3px 4px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-  width: 120px;
-  height: 20px;
-  border: 2px solid #7F7F7F;
-  padding: 3px 6px 3px 24px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-
-/** Extras (Widget - Footer Site Map Menu)
-****************************************************************/
-#sitemap, #sitemap-1 {
-  float: left;
+div.snippet ul {
+  width: auto;
   height: auto;
-  width: 100%;
+  color: #FFFFFF;
+  list-style: none;
+}
+
+
+/** Widget (New Life - Expandable Posts)
+****************************************************************/
+span.expandable-icon {
+  float: right;
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+  font-family: "courier new", "Lucida Grande", sans-serif;
+  font-size: 1.0em;
+}
+
+span.expandable-icon.collapsed {
+  background: url('images/arrow-left.png') no-repeat center center;
+  background-size: 24px 24px;
+}
+
+span.expandable-icon.expanded {
+  background: url('images/arrow-down.png') no-repeat center center;
+  background-size: 24px 24px;
 }
 
 span.expandable {
   float: right;
-  font-family: "courier new", "Lucida Grande", sans-serif;
   padding-right: 2px;
+  font-family: "courier new", "Lucida Grande", sans-serif;
 }
 
 div.expandable ul {
-  height: auto;
   width: auto;
+  height: auto;
+  color: #FFFFFF;
   list-style: none;
 }
 
-div.expandable ul li {
-  height: auto;
-  max-width: 180px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  border: 1px solid #000000;
-  background-color: #E3E3E3;
-  cursor: pointer;
-  display: block;
-  margin: 10px auto !important;
-  padding: 4px 0px 4px 4px !important;
-}
 
-div.expandable ul li a {
-  text-decoration: underline;
-}
-
-div.expandable ul li ul {
-  height: auto;
-  width: auto;
-  display: none;
-}
-
-div.expandable ul li ul li {
-  height: auto;
-  width: auto;
-  border: none;
-  margin: 2px 0px !important;
-}
-
-
-/** Extras (Social-Media-Buttons)
+/** Widget (New Life - Link to Page)
 ****************************************************************/
-.social-media-buttons {
-  display: block;
-  /*float: right;*/
-  height: 30px;
-  margin: 0px auto;
+span.link-page-icon {
+  float: right;
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+  font-family: "courier new", "Lucida Grande", sans-serif;
+  font-size: 1.0em;
 }
 
-.g-plus {  /* Badge */
-}
-.g-plusone {  /* Button (SYSTEM) */
-}
-.fb-like {  /* Button (SYSTEM) */
+span.link-page-icon {
+  background: url('images/arrow-right-right.png') no-repeat center center;
+  background-size: 24px 24px;
 }
 
-.google,
-.facebook,
-.twitter {
-  width: 120px;
-  height: 20px;
-  display: inline;
-  float: left;
-  margin-top: 5px;
-  text-align: left;
-  vertical-align: middle;
-}
 
-/*
-.google {
-  background-color: #FFE3E3;
-}
-
-.facebook {
-  background-color: #E3FFE3;
-}
-
-.twitter {
-  background-color: #E3E3FF;
-}
-*/
-
-
-/** Extras (Lightbox-Effect)
+/** Widget (New Life - Link to Social Media)
 ****************************************************************/
-.black_overlay {
-  display: none;
-  position: fixed;
-  top: 0%;
-  left: 0%;
+.newlife-widget.newlife-link-social {
+  text-align: center;
+}
+
+@media screen and (min-width: 901px) {
+  #newlife-widget-area-desktop .newlife-widget.newlife-link-social {
+    float: left;
+  }
+  
+  #newlife-widget-area-desktop .newlife-widget.newlife-link-social ul li{
+    display: block;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .newlife-widget.newlife-link-social {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  #newlife-widget-area-desktop .newlife-widget.newlife-link-social ul li{
+    display: inline;
+  }
+}
+
+.newlife-widget.newlife-link-social ul {
   width: 100%;
-  height: 100%;
-  background-color: black;
-  z-index:1001;
-  -moz-opacity: 0.8;
-  opacity:.80;
-  filter: alpha(opacity=80);
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
-.white_content {
-  display: none;
-  position: fixed;
-  top: 25%;
-  left: 25%;
+#newlife-widget-area-desktop .newlife-widget.newlife-link-social ul li{
+  position: relative;
+  margin: 1.5%;
+  font-size: 1.2em;
+}
+
+#newlife-widget-area-mobile .newlife-widget.newlife-link-social ul li{
+  position: relative;
+  display: inline;
+  margin: 1.5%;
+  font-size: 1.2em;
+}
+
+.newlife-widget.newlife-link-social ul li img{
+  display: inline;
+  padding: 0px;
+  background-color: #FFFFFF;
+  -webkit-border-radius: 10px;
+  -moz-border-radius:    10px;
+  border-radius:         10px;
+}
+
+@media only screen and (min-width: 601px){
+  .newlife-widget.newlife-link-social ul li img{
+    max-width: 96px;
+    max-height: 96px;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .newlife-widget.newlife-link-social ul li img{
+    width: 15%;
+    min-width: 48px;
+    min-height: 48px;
+  }
+}
+
+/** Widget (New Life - Link List)
+****************************************************************/
+.newlife-widget.newlife-link-list {
+  text-align: center;
+}
+
+.newlife-widget.newlife-link-list ul {
+  width: 100%;
+  margin: 0 0 10px 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.newlife-widget.newlife-link-list ul li {
+  display: inline;
+  height: 30px;
+  margin: 0;
+  padding: 2px 10px;
+  border-right: 2px solid #0C4B59;
+  font-size: 1.2em;
+}
+
+.newlife-widget.newlife-link-list ul li:last-child {
+  border-right: 0px solid #0C4B59;
+}
+
+.newlife-widget.newlife-link-list ul li a {
+  color: #0C4B59;
+}
+
+
+/** Widget (New Life - Nav Menu)
+****************************************************************/
+@media screen and (min-width: 901px) {
+  .newlife-menu {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .newlife-menu {
+    display: block;
+    width: 98%;
+    margin-right: 1%;
+    margin-left: 1%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .newlife-menu {
+    display: none;
+  }
+}
+
+
+/** Widget (New Life - Search)
+****************************************************************/
+.newlife-widget.newlife-search {
+  position: relative;
+}
+
+.newlife-widget.newlife-search form.form-search {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.newlife-widget.newlife-search form.form-search input.form-search {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
   width: 50%;
-  height: 50%;
-  padding: 16px;
-  border: 16px solid orange;
-  background-color: white;
-  z-index:1002;
-  overflow: auto;
+  min-width: 180px;
+  height: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 3px 6px 2px 24px;
+  background: #FFFFFF url('images/magnifying-glass.png') no-repeat 3px 4px;
+  border: 2px solid #7F7F7F;
+  -webkit-border-radius: 6px;
+  -moz-border-radius:    6px;
+  border-radius:         6px;
 }
