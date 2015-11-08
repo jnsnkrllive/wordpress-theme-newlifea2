@@ -1,0 +1,827 @@
+/**
+ ** Theme Name: New Life Theme
+ ** Theme URI: http://www.newlifea2.org/
+ ** Version: 3.4.2 Alpha
+ ** Description: WordPress Theme for New Life Church
+ ** Author: Karl Jansen
+ ** Author URI: http://karcor.com
+ **/
+
+/** Color Scheme **
+
+#0088A7 = rgb(0,136,167) = Logo Blue
+#AACF54 = rgb(170,207,84) = Logo Green
+
+Primary...
+#CE1326 = rgb(206,19,38) = Red
+#E3E3E3 = rgb(227,227,227) = Light Gray
+#686060 = rgb(104,96,96) = Dark Gray
+#000000 = rgb(0,0,0) = Black
+#FFFFFF = rgb(255,255,255) = White
+Secondary...
+Accent...
+**/
+
+/** Font Family **
+"Lucida Grande", sans-serif;
+**/
+
+
+/** Global
+****************************************************************/
+html {
+  background-color: #E3E3E3;
+  display: block;
+  height: 100%;
+}
+
+body {
+  display: block;
+  font-family: "Lucida Grande", sans-serif;
+  font-size: medium;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  margin: 0px 0px -90px 0px;
+  text-decoration: none;
+  word-spacing: normal;
+}
+
+img {
+  border: none;
+  display: block;
+}
+
+
+/** General Classes
+****************************************************************/
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.alignleft {
+  float: left;
+}
+
+.aligncenter {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.alignright {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.hide {
+  display: none;
+}
+
+
+/** Structure
+****************************************************************/
+#main-container {
+  -moz-box-shadow: 0px 0px 9px 9px #686060;
+  -webkit-box-shadow: 0px 0px 9px 9px #686060;
+  box-shadow: 0px 0px 9px 9px #686060;
+  background-color: #FFFFFF;
+  width: 900px;
+  /*height: 100%;*/
+height: auto;
+  margin: 0px auto 0px auto;
+  padding: 0px;
+}
+
+#header-container {
+/*
+position: fixed;
+top: 0px;
+*/
+  width: 900px;
+  height: 90px;
+  background-color: #FFFFFF;
+  border-bottom: 2px solid #000000;
+  margin: 0px;
+  padding: 0px;
+  z-index: 999;
+}
+
+#header-area-1 {
+  width: 200px;
+  height: 90px;
+  display: inline;
+  float: left;
+  margin: 0px;
+  padding: 0px;
+}
+
+#header-area-2 {
+  width: 700px;
+  height: 90px;
+  display: inline;
+  float: left;
+  margin: 0px;
+  padding: 0px;
+}
+
+#header-logo a img{
+  height: 80px;
+  padding: 5px;
+}
+
+#header-titlebar {
+  width: 500px;
+  height: 67%;
+  display: inline;
+  float: left;
+  margin: 0px;
+  padding: 0px;
+}
+
+#header-searchbar {
+  width: 200px;
+  height: 67%;
+  display: inline;
+  float: left;
+  margin: 0px;
+  padding: 0px;
+}
+
+#header-navbar {
+  width: 700px;
+  height: 33%;
+  display: inline;
+  float: left;
+  margin: 0px;
+  padding: 0px;
+}
+
+#scrollable {
+width: 900px;
+/*
+padding-top: 92px;
+*/
+/*
+  width: 890px;
+  position: absolute;
+  top: 92px;
+  bottom: 0px;
+  display: inline;
+  overflow: hidden;
+  padding-right: 10px; /* same as #scrollbar.width
+*/
+}
+
+#scrollbar {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 10;
+  background: #444;
+  border-radius: 5px;
+  cursor: pointer;
+  visibility: hidden;
+  width: 10px;
+}
+
+#content {
+  /*position: absolute;*/
+  margin: 0px;
+  padding: 0px;
+  vertical-align: top;
+}
+
+
+#page-container,
+#post-container {
+/*background-color: rgb(250,250,255);*/
+  width: 600px;
+  display: inline;
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  vertical-align: top;
+}
+
+#sidebar-container {
+/*background-color: rgb(255,250,250);*/
+  width: 300px;
+  display: inline;
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  vertical-align: top;
+}
+
+#footer-container {
+/*background-color: rgb(250,255,250);*/
+  width: 100%;
+  margin: 0px;
+  padding: 10px 0 30px 0;
+  vertical-align: top;
+}
+
+
+/** Header
+****************************************************************/
+#header-titlebar #blogname {
+  font-size: 1.5em;
+  font-weight: 900;
+  margin-left: 5px;
+}
+
+#header-titlebar #blogdesc {
+  font-size: 1.0em;
+  margin-left: 5px;
+}
+
+
+/** Navigation
+****************************************************************/
+#navmenu { /* The container wrapping ul.dropdown */
+  float: left;
+  width: 100%;
+}
+
+ul.dropdown { /* Top Level Unordered List */
+  float: left;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
+ul.dropdown li {
+  display: inline;
+  float: left;
+  font-size: 1.2em;
+  position: relative;
+  height: 30px;
+}
+
+ul.dropdown li a {
+  color: #000000;
+  font-weight: 200;
+  line-height: 30px;
+  margin: 0px;
+  padding: 0px 15px;
+  text-decoration: none;
+}
+
+ul.dropdown li:hover {
+  -moz-border-radius-topright: 9px;
+  -moz-border-radius-topleft: 9px;
+  border-top-right-radius: 9px;
+  border-top-left-radius: 9px;
+  background-color: #000000;
+}
+
+ul.dropdown li:hover a {
+  color: #FFFFFF;
+}
+
+ul.dropdown li ul a {
+  display: block;
+  line-height: 15px;
+  margin: 0px;
+  padding: 10px;
+}
+
+ul.dropdown ul { /* Sub Level Unordered List */
+  list-style: none;
+  border-top: 2px solid #000000;
+  padding: 0px;
+  position: absolute;
+  width: 180px;
+  z-index: 50;
+}
+
+ul.dropdown li ul {
+  top: 30px;
+}
+
+ul.dropdown ul ul {
+  left: 100%;
+  top: 0;
+}
+
+ul.dropdown ul li {
+  float: none;
+  font-size: 0.8em;
+}
+
+ul.dropdown ul,
+ul.dropdown li:hover ul ul,
+ul.dropdown ul li:hover ul ul {
+  display: none;
+}
+
+ul.dropdown li:hover ul,
+ul.dropdown ul li:hover ul ,
+ul.dropdown ul li ul li:hover ul {
+  background-color: #E3E3E3;
+  display: block;
+}
+
+ul.dropdown li * a:link,
+ul.dropdown li * a:active,
+ul.dropdown li * a:visited {
+  color: #000000;
+}
+
+ul.dropdown li * a:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+
+/** Text
+****************************************************************/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #686060;
+  font-family: "Arial", "Vendana", serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  letter-spacing: normal;
+  line-height: normal;
+  margin-top: 11px;
+  margin-right: 0px;
+  margin-bottom: 11px;
+  margin-left: 0px;
+  text-decoration: none;
+  vertical-align: middle;
+  word-spacing: normal;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+h4 {
+  font-size: 1.0em;
+}
+
+h5 {
+  font-size: 0.8em;
+}
+
+h6 {
+  font-size: 0.4em;
+}
+
+
+/** Links
+****************************************************************/
+
+a:link,
+a:active,
+a:visited,
+a:hover {
+  color: #686060;
+  font-family: "Lucida Grande", sans-serif;
+}
+
+a:link,
+a:active,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/** Lists
+****************************************************************/
+/*
+ol,
+ul,
+li {
+  font-family: "Lucida Grande", sans-serif;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+ul.disc {
+  list-style-type: disc;
+}
+
+ul.circle {
+  list-style-type: circle;
+}
+
+ul.none {
+  list-style-type: none;
+}
+
+ol.decimal {
+  list-style-type: decimal;
+}
+
+ol.uroman {
+  list-style-type: upper-roman;
+}
+
+ol.lalpha {
+  list-style-type: lower-alpha;
+}
+
+li {
+  text-align: left;
+}
+*/
+
+
+/** Extras (Post)
+****************************************************************/
+div.post {
+  width: 95%;
+  height: auto;
+  border-bottom: 1px solid #686060;
+  margin: 10px auto;
+  padding: 0px;
+}
+
+div.post-title h2, 
+div.post-title h2 a {
+  color: #686060;
+  font-weight: bold;
+  margin-bottom: 6px;
+  text-align: center;
+  text-decoration: none;
+}
+
+div.post-title h2 a:hover {
+  text-decoration: underline;
+}
+
+div.post-meta {
+  font-size: small;
+  height: 100%;
+  padding-left: 3px;
+  position: relative;
+}
+
+div.post-meta a {
+  color: #686060;
+  text-decoration: none;
+}
+
+div.post-meta a:hover {
+  text-decoration: underline;
+}
+
+span.post-metadata-author,
+span.post-metadata-date,
+span.post-metadata-category,
+span.post-metadata-tags {
+  display: hidden;
+}
+
+div.post-entry {
+  font-size: medium;
+}
+
+div.post-entry-page {
+  font-size: medium;
+}
+
+div.post-entry a {
+  color: #686060;
+}
+
+h2.pagetitle  {
+  color: #000000;
+  text-align: center;
+  text-decoration: underline;
+}
+
+div.navigation {
+  margin: 9px;
+}
+
+span.edit-post {
+  display: inline;
+  float: right;
+}
+
+span.edit-page {
+  display: block;
+  text-align: right;
+}
+
+
+/** Extras (Sidebar)
+****************************************************************/
+#sidebar-container div.widget-area {
+  width: 95%;
+  display: block;
+  font-size: 0.8em;
+  line-height: 1.4em;
+  margin: 0px auto;
+}
+
+#sidebar-container div.widget-area a {
+  color: #686060;
+}
+
+#sidebar-container div.widget-area ul.none {
+  margin: 0px;
+  padding: 0px;
+}
+
+#sidebar-container div.widget-area ul {
+  font-size: 12px;
+  list-style: none;
+  margin: 0px;
+  padding: 0 15px 0 20px;
+}
+
+#sidebar-container div.widget-area ul li ul {
+  margin: 0px;
+  padding: 0 0 0 2px;
+}
+	
+#sidebar-container div.widget-area ul li ul li ul {
+  margin: 6px 0 -12px 0;
+  padding: 0 0 0 2px;
+}
+
+#sidebar-container div.widget-area ul li {
+  line-height: 15px;
+  margin: 0px 0px -1px 0px;
+  padding: 3px 0 3px 0px;
+}
+		
+#sidebar-container div.widget-area ul li a {
+  background: none;
+  color: #686060;
+  font-weight: bold;
+  padding: 0 0 0 6px;
+  text-decoration: none;
+}
+
+#sidebar-container div.widget-area ul li a:hover {
+  text-decoration: underline;
+}
+
+#sidebar-container div.widget-area h2 {
+  color: #686060;
+  font: bold 1.2em "Lucida Grande", sans-serif;
+  line-height: 0.6em;
+  padding: 6px 0 0 0;
+  text-align: center;
+}
+
+#sidebar-container div.widget-area h3 {
+  font: normal 1.0em "Lucida Grande", sans-serif;
+  padding: 0 0 3px 0;
+}
+
+
+/** Extras (Footer)
+****************************************************************/
+#footer-container div.widget-area {
+  display: inline;
+  float: left;
+  width: 33%;
+  font-size: 0.8em;
+  line-height: 1.4em;
+  margin: 0px auto;
+}
+
+#footer-container div.widget-area div {
+  padding-bottom: 10px;
+}
+
+#footer-container div.widget-area a {
+  color: #686060;
+}
+
+#footer-container div.widget-area ul.none {
+  margin: 0px;
+  padding: 0px;
+}
+
+#footer-container div.widget-area ul {
+  font-size: 12px;
+  list-style: none;
+  margin: 0px;
+  padding: 0 15px 0 20px;
+}
+
+#footer-container div.widget-area ul li {
+  line-height: 15px;
+  margin: 0px 0px -1px 0px;
+  padding: 3px 0 3px 0px;
+}
+
+#footer-container div.widget-area ul li ul {
+  margin: 0px;
+  padding: 0 0 0 2px;
+}
+
+#footer-container div.widget-area ul li ul li ul {
+  margin: 6px 0 -6px 0;
+  padding: 0 0 0 2px;
+}
+
+#footer-container div.widget-area ul li a {
+  background: none;
+  color: #686060;
+  font-weight: bold;
+  padding: 0 0 0 6px;
+  text-decoration: none;
+}
+
+#footer-container div.widget-area ul li a:hover {
+  text-decoration: underline;
+}
+
+#footer-container div.widget-area h2 {
+  color: #686060;
+  font: bold 1.2em "Lucida Grande", sans-serif;
+  line-height: 0.8em;
+  margin: 0px;
+  padding: 6px 0px;
+  text-align: center;
+}
+
+#footer-container div.widget-area h3 {
+  font: normal 1.0em "Lucida Grande", sans-serif;
+  padding: 0 0 3px 0;
+}
+
+
+/** Extras (Widget - Search Form)
+****************************************************************/
+#header-searchbar .form-search {
+  margin-top: 8px;
+}
+
+form.form-search {
+  text-align: center;
+}
+
+input#s {
+  background: url('images/magnifying-glass.png') no-repeat 3px 4px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  width: 120px;
+  height: 20px;
+  border: 2px solid #7F7F7F;
+  padding: 3px 6px 3px 24px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+/** Extras (Widget - Footer Site Map Menu)
+****************************************************************/
+#sitemap, #sitemap-1 {
+  float: left;
+  height: auto;
+  width: 100%;
+}
+
+span.expandable {
+  float: right;
+  font-family: "courier new", "Lucida Grande", sans-serif;
+  padding-right: 2px;
+}
+
+div.expandable ul {
+  height: auto;
+  width: auto;
+  list-style: none;
+}
+
+div.expandable ul li {
+  height: auto;
+  max-width: 180px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  background-color: #E3E3E3;
+  cursor: pointer;
+  display: block;
+  margin: 10px auto !important;
+  padding: 4px 0px 4px 4px !important;
+}
+
+div.expandable ul li a {
+  text-decoration: underline;
+}
+
+div.expandable ul li ul {
+  height: auto;
+  width: auto;
+  display: none;
+}
+
+div.expandable ul li ul li {
+  height: auto;
+  width: auto;
+  border: none;
+  margin: 2px 0px !important;
+}
+
+
+/** Extras (Social-Media-Buttons)
+****************************************************************/
+.social-media-buttons {
+  display: block;
+  /*float: right;*/
+  height: 30px;
+  margin: 0px auto;
+}
+
+.g-plus {  /* Badge */
+}
+.g-plusone {  /* Button (SYSTEM) */
+}
+.fb-like {  /* Button (SYSTEM) */
+}
+
+.google,
+.facebook,
+.twitter {
+  width: 120px;
+  height: 20px;
+  display: inline;
+  float: left;
+  margin-top: 5px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+/*
+.google {
+  background-color: #FFE3E3;
+}
+
+.facebook {
+  background-color: #E3FFE3;
+}
+
+.twitter {
+  background-color: #E3E3FF;
+}
+*/
+
+
+/** Extras (Lightbox-Effect)
+****************************************************************/
+.black_overlay {
+  display: none;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index:1001;
+  -moz-opacity: 0.8;
+  opacity:.80;
+  filter: alpha(opacity=80);
+}
+
+.white_content {
+  display: none;
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  padding: 16px;
+  border: 16px solid orange;
+  background-color: white;
+  z-index:1002;
+  overflow: auto;
+}
